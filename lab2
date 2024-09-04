@@ -1,0 +1,553 @@
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1
+$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in //win2012/y21acs/y21acs404/4th_year/DevOps/practice1/.git/
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (master)
+$ git remote add origin https://github.com/Anandam965/practice.git
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (master)
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:47:55 2024 +0530
+
+    Update file2
+
+commit c3d1f785ebefaca37fb1c17a64f95e34a7c0966c
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:43:44 2024 +0530
+
+    Update file2
+
+commit 6d107304d0dbf300ae96047ec053d29116b4e785
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:42:15 2024 +0530
+
+    Create file4
+
+commit 35384c2ececc3376209538c7102404ecedc91cf6
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:34:55 2024 +0530
+
+    Create file3
+
+:
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:47:55 2024 +0530
+
+    Update file2
+
+commit c3d1f785ebefaca37fb1c17a64f95e34a7c0966c
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:43:44 2024 +0530
+
+    Update file2
+
+commit 6d107304d0dbf300ae96047ec053d29116b4e785
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:42:15 2024 +0530
+
+    Create file4
+
+commit 35384c2ececc3376209538c7102404ecedc91cf6
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:34:55 2024 +0530
+
+    Create file3
+
+commit 848ea22739115a56a2beb0855b69f6292395a012
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:34:30 2024 +0530
+
+    Create file2
+
+commit 04f4c0d22c01f8836efff82c1e3fa93a2f2fca1f
+Author: Anandam965 <anandamvenkatanagasai@gmail.com>
+Date:   Wed Sep 4 14:30:36 2024 +0530
+
+    Create file1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (master)
+$ git checkout main
+branch 'main' set up to track 'origin/main'.
+Switched to a new branch 'main'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file1  file2  file3  file4
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git fetch
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 879 bytes | 19.00 KiB/s, done.
+From https://github.com/Anandam965/practice
+   0c7a2ce..f00c3b1  main       -> origin/main
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file1  file2  file3  file4
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git merge
+Updating 0c7a2ce..f00c3b1
+Fast-forward
+ file5 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file5
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file1  file2  file3  file4  file5
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+f00c3b1 (HEAD -> main, origin/main) Create file5
+0c7a2ce (master) Update file2
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ vi file2
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git diff
+diff --git a/file2 b/file2
+index a39a620..bfef5ac 100644
+--- a/file2
++++ b/file2
+@@ -1 +1,2 @@
+ this is file 2
++updated
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git diff HEAD
+diff --git a/file2 b/file2
+index a39a620..bfef5ac 100644
+--- a/file2
++++ b/file2
+@@ -1 +1,2 @@
+ this is file 2
++updated
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file2
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git diff --staged
+diff --git a/file2 b/file2
+index a39a620..bfef5ac 100644
+--- a/file2
++++ b/file2
+@@ -1 +1,2 @@
+ this is file 2
++updated
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git commit -m "modified in file2"
+[main dd43efa] modified in file2
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+dd43efa (HEAD -> main) modified in file2
+f00c3b1 (origin/main) Create file5
+0c7a2ce (master) Update file2
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git rm file1
+rm 'file1'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git mv file3 myfile3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file2  file4  file5  myfile3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file1
+        renamed:    file3 -> myfile3
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git commit -m "rm-mv"
+[main 7e826de] rm-mv
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 deletion(-)
+ delete mode 100644 file1
+ rename file3 => myfile3 (100%)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+7e826de (HEAD -> main) rm-mv
+dd43efa modified in file2
+f00c3b1 (origin/main) Create file5
+0c7a2ce (master) Update file2
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 530 bytes | 176.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Anandam965/practice.git
+   f00c3b1..7e826de  main -> main
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ touch file6
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ touch file7
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file6
+        file7
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git commit -m "2 files added"
+[main 68be6f8] 2 files added
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file6
+ create mode 100644 file7
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+68be6f8 (HEAD -> main) 2 files added
+7e826de (origin/main) rm-mv
+dd43efa modified in file2
+f00c3b1 Create file5
+0c7a2ce (master) Update file2
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git reset ^C
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git reset c3d1f78
+Unstaged changes after reset:
+D       file1
+D       file3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    file1
+        deleted:    file3
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file5
+        file6
+        file7
+        myfile3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file2  file4  file5  file6  file7  myfile3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file1
+        new file:   file5
+        new file:   file6
+        new file:   file7
+        renamed:    file3 -> myfile3
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+c3d1f78 (HEAD -> main) Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git commit -m "after first reset"
+[main cb02e86] after first reset
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 file1
+ create mode 100644 file5
+ create mode 100644 file6
+ create mode 100644 file7
+ rename file3 => myfile3 (100%)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+cb02e86 (HEAD -> main) after first reset
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git reset --soft c3d1f78
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    file1
+        new file:   file5
+        new file:   file6
+        new file:   file7
+        renamed:    file3 -> myfile3
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file2  file4  file5  file6  file7  myfile3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+c3d1f78 (HEAD -> main) Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git commit -m "after second reset"
+[main e02844a] after second reset
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 file1
+ create mode 100644 file5
+ create mode 100644 file6
+ create mode 100644 file7
+ rename file3 => myfile3 (100%)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+e02844a (HEAD -> main) after second reset
+c3d1f78 Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git reset --hard c3d1f78
+HEAD is now at c3d1f78 Update file2
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ git log --oneline
+c3d1f78 (HEAD -> main) Update file2
+6d10730 Create file4
+35384c2 Create file3
+848ea22 Create file2
+04f4c0d Create file1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
+$ ls
+file1  file2  file3  file4
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/practice1 (main)
