@@ -1,0 +1,403 @@
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo
+$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in //win2012/y21acs/y21acs404/4th_year/DevOps/rebaserepo/.git/
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat > file1.txt
+this is file1
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git commit -a -m "master c1"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+fatal: your current branch 'master' does not have any commits yet
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git commit  -m "master c1"
+[master (root-commit) 0732fd0] master c1
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+0732fd0 (HEAD -> master) master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat > file2.txt
+this is file2
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git commit  -m "master c2"
+[master 4e54b7b] master c2
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+4e54b7b (HEAD -> master) master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ ls
+file1.txt  file2.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ cat > file3.txt
+this is file3
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git commit -a -m "branch2 c1"
+On branch branch2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git add .
+warning: in the working copy of 'file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git commit  -m "branch2 c1"
+[branch2 41ace32] branch2 c1
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git log --oneline
+41ace32 (HEAD -> branch2) branch2 c1
+4e54b7b (master) master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git checkout master
+Switched to branch 'master'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ ls
+file1.txt  file2.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git merge branch2
+Updating 4e54b7b..41ace32
+Fast-forward
+ file3.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+41ace32 (HEAD -> master, branch2) branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat > file4.txt
+this is file4
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git commit  -m "master c3"
+[master 40c3ff2] master c3
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file4.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+40c3ff2 (HEAD -> master) master c3
+41ace32 (branch2) branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ ls
+file1.txt  file2.txt  file3.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git rebase master
+Successfully rebased and updated refs/heads/branch2.
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git log --oneline
+40c3ff2 (HEAD -> branch2, master) master c3
+41ace32 branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ cat > file5.txt
+this is file5
+
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git add .
+warning: in the working copy of 'file5.txt', LF will be replaced by CRLF the next time Git touches it
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git commit  -m "branch2 c2"
+[branch2 5a1105a] branch2 c2
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file5.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git log --oneline
+5a1105a (HEAD -> branch2) branch2 c2
+40c3ff2 (master) master c3
+41ace32 branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git checkout master
+Switched to branch 'master'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git merge branch2
+Updating 40c3ff2..5a1105a
+Fast-forward
+ file5.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file5.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+5a1105a (HEAD -> master, branch2) branch2 c2
+40c3ff2 master c3
+41ace32 branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat file4.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat file4
+cat: file4: No such file or directory
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  file5.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat file5.txt
+this is file5
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ vi file5.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ cat file5.txt
+this is file5
+updated in master branch
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git commit  -m "master c4"
+[master ba297b6] master c4
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git log --oneline
+ba297b6 (HEAD -> master) master c4
+5a1105a (branch2) branch2 c2
+40c3ff2 master c3
+41ace32 branch2 c1
+4e54b7b master c2
+0732fd0 master c1
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ cat file5.txt
+this is file5
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ vi file5.txt
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git commit -m "btanch2 c3"
+On branch branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git add .
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git commit -m "branch2 c3"
+[branch2 c9fb631] branch2 c3
+ Committer: y21acs404 <y21acs404@win2k18.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2)
+$ git rebase master
+Auto-merging file5.txt
+CONFLICT (content): Merge conflict in file5.txt
+error: could not apply c9fb631... branch2 c3
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply c9fb631... branch2 c3
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto ba297b6
+Last command done (1 command done):
+   pick c9fb631 branch2 c3
+No commands remaining.
+You are currently rebasing branch 'branch2' on 'ba297b6'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   file5.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+y21acs404@RP21SYS8 MINGW64 /z/4th_year/DevOps/rebaserepo (branch2|REBASE 1/1)
+$
